@@ -1,5 +1,5 @@
 FROM centos:centos7
-MAINTAINER Przemyslaw Ozgo linux@ozgo.info, Marcin Ryzycki marcin@m12.io
+MAINTAINER Ruud Zuiderlicht ruudw@zuiderlicht.nl, Przemyslaw Ozgo linux@ozgo.info, Marcin Ryzycki marcin@m12.io
 
 RUN yum update -y && \
   yum install -y epel-release && \
@@ -9,9 +9,14 @@ RUN yum update -y && \
 
 ADD start.sh /start.sh
 
+# Set the control terminal to be wide open by default, with no secret file.
+ENV VARNISH_ADMIN_LISTEN_ADDRESS 0.0.0.0
+ENV VARNISH_ADMIN_LISTEN_PORT 6082
+
 ENV VCL_CONFIG      /etc/varnish/default.vcl
 ENV CACHE_SIZE      64m
 ENV VARNISHD_PARAMS -p default_ttl=3600 -p default_grace=3600
 
 CMD /start.sh
 EXPOSE 80
+EXPOSE 6082
