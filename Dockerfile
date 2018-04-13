@@ -8,6 +8,7 @@ RUN yum update -y && \
   yum clean all
 
 ADD start.sh /start.sh
+ADD reload.sh /reload.sh
 
 # Set the control terminal to be wide open by default, with no secret file.
 ENV VARNISH_ADMIN_LISTEN_ADDRESS 0.0.0.0
