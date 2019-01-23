@@ -8,4 +8,4 @@ fi
  
 [ -n "$SOURCE_TYPE" ]        || SOURCE_TYPE=git
 [ -n "$DOCKERFILE_PATH" ]    || DOCKERFILE_PATH=.
-IMAGE_NAME=index.docker.io/zuiderlicht/docker-varnish:${SOURCE_BRANCH}-${GIT_TAG}
+IMAGE_NAME=docker-varnish:${SOURCE_BRANCH}-${GIT_TAG}
