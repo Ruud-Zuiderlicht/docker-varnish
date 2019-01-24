@@ -1,4 +1,4 @@
-# Varnish Docker container
+# Varnish Docker container for MPG
 
 > Centos 7  
 > Varnish 4.x
