@@ -12,7 +12,7 @@ docker run -d \
   --link web-app:backend-host \
   --volumes-from web-app \
   --env 'VCL_CONFIG=/data/path/to/varnish.vcl' \
-  million12/varnish
+  zuiderlicht/docker-varnish
 ```
 
 In the above example we assume that:
@@ -42,6 +42,3 @@ You can configure Varnish daemon by following env variables:
 * Przemyslaw Ozgo (<linux@ozgo.info>)
 * Ruud Walraven (<ruudw@zuiderlicht.nl>)  
 
----
-
-**Sponsored by** [Typostrap.io - the new prototyping tool](http://typostrap.io/) for building highly-interactive prototypes of your website or web app. Built on top of TYPO3 Neos CMS and Zurb Foundation framework.
